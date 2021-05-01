@@ -1,3 +1,25 @@
-import * api from '../api';
+import * as api from '../api';
+import Post from '../components/Posts/Post/Post';
 
-api.fetchPost
+export const getPosts = () => async (dispatch) => {
+    const action = {type: 'FETCH_ALL', payload: []};
+
+    try{
+        const {data} = await api.fetchPosts()
+        dispatch({ type: 'FETCH_ALL', payload: data });
+    }catch(error){
+        console.log(error.message);
+    }
+
+}
+
+export const createPost = (post) => async (dispatch) => {
+    try {
+        const { data } = await api.createPost(post);
+
+        dispatch({ type: 'CREATE', payload: data })
+        
+    } catch (error) {
+        console.log(error)
+    }
+}

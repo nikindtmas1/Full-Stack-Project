@@ -15,7 +15,7 @@ app.use(cors());
 
 app.use('/posts', postRoutes);
 
-const CONNECTION_URL = 'mongodb+srv://JavaScript-Spa-Menu:mongodb548444@cluster0.onbxf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+//const CONNECTION_URL = 'mongodb+srv://JavaScript-Spa-Menu:mongodb548444@cluster0.onbxf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 
 const PORT = process.env.PORT || 5000;
 

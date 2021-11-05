@@ -21,6 +21,7 @@ app.get('/', (req,res) => {
 
 //const CONNECTION_URL = 'mongodb+srv://JavaScript-Spa-Menu:mongodb548444@cluster0.onbxf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 
+//const CONNECTION_URL = 
 const PORT = process.env.PORT || 5000;
 
 mongoos.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })

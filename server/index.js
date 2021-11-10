@@ -21,10 +21,10 @@ app.get('/', (req,res) => {
 
 //const CONNECTION_URL = 'mongodb+srv://JavaScript-Spa-Menu:mongodb548444@cluster0.onbxf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 
-//const CONNECTION_URL = 
+const CONNECTION_URL = 'mongodb://localhost:27017/full-stack';
 const PORT = process.env.PORT || 5000;
 
-mongoos.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoos.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
 .then(() => app.listen(PORT, () => console.log(`Server running on port: ${PORT}`)))
 .catch((error) => console.log(error.message));
 
